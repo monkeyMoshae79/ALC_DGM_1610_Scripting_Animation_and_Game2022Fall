@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerContoler : MonoBehaviour
 { 
     // Access Mod, Data Typy, Name ;   
-    public int speed; // set speed
+    public float speed; // set speed
     public float rotSpeed; //Rotation speed
     public float hInput; // horizonatl input
     public float vInput; //vertical input
