@@ -7,7 +7,8 @@ public class BalloonScript : MonoBehaviour
 {
     public int clickToPop = 3; //How many clicks before balloon pops
 
-    public float scaleToIncrease = 0.10f; //Scale increase each time the ballon is clicked 
+    public float scaleToIncrease = 0.10f; //Scale increase each time the ballon is clicked
+
 
     // Start is called before the first frame update
     void Start()

@@ -8,7 +8,7 @@ public class MoveFloatup : MonoBehaviour
     public float upperBound = 25.0f;
     private BalloonScript balloon;
 
-    private ScoreManger scoreManger; // A varible to reference the scoreManager
+    private ScoreManager scoreManger; // A varible to reference the scoreManager
 
 
     // Start is called before the first frame update
