@@ -6,8 +6,8 @@ public class MoveFloatup : MonoBehaviour
 {
     public float moveSpeed = 1.0f;
     public float upperBound = 25.0f;
-    private BalloonScript balloon;
 
+    private BalloonScript balloon;
     private ScoreManager scoreManger; // A varible to reference the scoreManager
 
 
@@ -15,8 +15,9 @@ public class MoveFloatup : MonoBehaviour
     void Start()
     {
         //Reference.ScoreManger Componet
-        scoreManger = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
-        balloon = GetComponent<BalloonScript>(); //reference balloon script
+        scoreManger = GameObject.Find("ScoreManager").
+        GetComponent<ScoreManager>(); // Reference ScoreManager
+        balloon = GetComponent<BalloonScript>(); //Reference balloon script
         
     }
 
