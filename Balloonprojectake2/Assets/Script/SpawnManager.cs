@@ -21,10 +21,10 @@ public class SpawnManager : MonoBehaviour
     void SpawnRandomBalloon()
     {
         // Get a random position on the x-axis
-        Vector3 spawnPos = new Vector3(Random.Range(-xRange, xRange),0, 0);
+        Vector3 spawnPos = new Vector3(Random.Range(-xRange,xRange),0, 0);
 
         // Pick a random balloon from the balloon array
-        int balloonIndex = Random.Range(0, balloonPrefabs.Length);
+        int balloonIndex = Random.Range(0,balloonPrefabs.Length);
 
         // Spawn random balloon at spawn position
         Instantiate(balloonPrefabs[balloonIndex], spawnPos, balloonPrefabs[balloonIndex].transform.rotation);

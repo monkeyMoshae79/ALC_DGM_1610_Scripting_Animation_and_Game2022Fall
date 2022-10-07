@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    public  string name;
+    public  string names;
     public string typeOfPickup;
     public string description;
 

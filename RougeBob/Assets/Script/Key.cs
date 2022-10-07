@@ -9,16 +9,16 @@ public class Key : Pickup
        // Start is called before the first frame update
     void Start()
     {
-        gm = GameObject.Find("GameManager").
-        GetCompnent<GameManager>();
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
        void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            gm.AddKey (amoount0);
-            Destory(gameObject);//Destory pickup item
+            gm.AddKey (amount);
+            Destroy(gameObject);//Destroy pickup item
+        
         }
     }
 
