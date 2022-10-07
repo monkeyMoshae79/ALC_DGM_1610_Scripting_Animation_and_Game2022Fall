@@ -24,6 +24,6 @@ public class GameManager : MonoBehaviour
     {
 
         key += amount; //Add keys to inventory
-        Debuy.Log("You have "+ keys +" Keys");
+        Debuy.Log("You have "+ keys +" Keys")
     }
 }
