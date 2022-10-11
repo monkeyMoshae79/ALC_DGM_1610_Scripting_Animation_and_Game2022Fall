@@ -14,6 +14,7 @@ public class Key : Pickup
 
        void OnTriggerEnter2D(Collider2D other)
     {
+       //pickup key
         if(other.gameObject.CompareTag("Player"))
         {
             gm.AddKey (amount);

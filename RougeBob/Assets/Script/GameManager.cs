@@ -9,6 +9,6 @@ public class GameManager : MonoBehaviour
    public void AddKey(int amount)
     {
         key += amount; //Add key to inventory
-        Debug.Log("You have" + key + "Keys");
+        Debug.Log("You have" + key + "Keys"); //Print message showing hoe many keys have in inventory
     }
 }
