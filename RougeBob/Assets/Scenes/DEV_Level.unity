@@ -238,7 +238,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -443,6 +443,7 @@ GameObject:
   - component: {fileID: 263502512}
   - component: {fileID: 263502514}
   - component: {fileID: 263502515}
+  - component: {fileID: 263502516}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Untagged
@@ -591,8 +592,21 @@ MonoBehaviour:
   speed: 2
   stopDistance: 5
   retreatDistance: 2
-  startDelay: 0.5
+  startDelay: 2
   projectile: {fileID: 5638918336432018055, guid: 22752902c49804b0e914c0059eb125ba, type: 3}
+--- !u!114 &263502516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263502509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 836efe7ca7e1743629017734c4a8edce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
 --- !u!4 &352130086 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6067406284839985089, guid: 451d4196e5b674cf583b30b129dbed18, type: 3}
@@ -990,6 +1004,8 @@ GameObject:
   - component: {fileID: 1423606451}
   - component: {fileID: 1423606450}
   - component: {fileID: 1423606452}
+  - component: {fileID: 1423606454}
+  - component: {fileID: 1423606453}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1122,6 +1138,40 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1423606453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423606447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1df680c415d440f9e33396b65bb3d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  currentHealth: 0
+  deathDelay: 0
+--- !u!114 &1423606454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423606447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb2635eb8ffe4408b9d0dc45ee730046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startDelay: 2
+  attackPos: {fileID: 0}
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 0
+  attackRange: 2
+  damage: 1
 --- !u!1 &1529162203
 GameObject:
   m_ObjectHideFlags: 3
@@ -1769,7 +1819,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

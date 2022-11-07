@@ -22,7 +22,7 @@ public class PlayerAttack : MonoBehaviour
 
                 for(int i = 0; i < enemiesToDamage.Length; i++) //(starting point; how many time going loop/loop duriations, [++ = increased by one] how going increased until reach loop duration and get out of loop)
                 {
-                    //enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
                 }
             }
            
