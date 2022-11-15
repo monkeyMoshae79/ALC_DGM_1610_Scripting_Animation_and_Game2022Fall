@@ -29,8 +29,7 @@ public class Projectile : MonoBehaviour
             DestroyProjectile();
         }
     }
-
-   
+    void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))//Destory projectile if it hits the player
         {
@@ -38,11 +37,8 @@ public class Projectile : MonoBehaviour
             playerHealth.TakeDamage(damage);
         }
     }
-
     void DestroyProjectile()
     {
         Destroy(gameObject);
     }
-
-
 }

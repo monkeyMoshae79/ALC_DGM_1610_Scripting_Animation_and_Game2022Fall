@@ -6,11 +6,14 @@ public class ChestLoot : MonoBehaviour
 {
     private GameManager gm;
     public float chestDelay = 0.5f;
+    //public float prefab;
+
 
     // Start is called before the first frame update
     void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+    
     }
 
     // Update is called once per frame
@@ -24,6 +27,7 @@ public class ChestLoot : MonoBehaviour
             Destroy(gameObject, chestDelay);
             gm.key --;
             Debug.Log("Chest is open");
+            //Instantiate(, Quaternion.identity);
         }
         else
         {
