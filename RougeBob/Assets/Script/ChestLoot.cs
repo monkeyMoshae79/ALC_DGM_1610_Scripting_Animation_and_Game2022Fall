@@ -6,6 +6,9 @@ public class ChestLoot : MonoBehaviour
 {
     private GameManager gm;
     public float chestDelay = 0.5f;
+
+    public ItemDrop iT;
+
     //public float prefab;
 
 
@@ -13,7 +16,7 @@ public class ChestLoot : MonoBehaviour
     void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
-    
+        iT = GameObject.Find("HealthAdded").GetComponent<ItemDrop>();
     }
 
     // Update is called once per frame
