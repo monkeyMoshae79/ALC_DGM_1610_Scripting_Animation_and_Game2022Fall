@@ -52,9 +52,9 @@ public class Enemy : MonoBehaviour
             return;
 
         //move towards th closest path
-        transform.position = Vector3.MoveTowards(transform.position, path(0) + new Vector3(0, yPathOffset, 0), moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, path[0] + new Vector3(0, yPathOffset, 0), moveSpeed * Time.deltaTime);
 
-        if(transform.position == (0) + new Vector3(0, yPathOffset, 0))
+        if(transform.position == path[0] + new Vector3(0, yPathOffset, 0))
             path.RemoveAt(0);
     }
 
@@ -62,7 +62,7 @@ public class Enemy : MonoBehaviour
     {
         curHP -= damage; //Subtracts damage amount from health
 
-        if(curHP == 0)
+        if(curHP <= 0)
             Die();
     }
 
@@ -75,13 +75,13 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         // Look at Target
-        Vector3 dir = (target.transform.position - transform.position).notmslized;
-        float angle = Mathf.Atan2(dir.x, dir.z) * Mathf.Red2Deg;
+        Vector3 dir = (target.transform.position - transform.position).normalized;
+        float angle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
 
         transform.eulerAngles = Vector3.up * angle;
 
         // Get distance from enemy to player/trager
-        float dist = Vector3.Distance(transform.positon, target.transform.position);
+        float dist = Vector3.Distance(transform.position, target.transform.position);
 
         if(dist <= attackRange)
         {
